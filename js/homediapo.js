@@ -14,11 +14,10 @@ const swiper = new Swiper('.mySwiper', {
       if (activeSlide.querySelector('.slogan2')) animateSlogan2();
       if (activeSlide.querySelector('.slogan3')) animateSlogan3();
     }
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
   }
 });
 
-// Animation au chargement du premier slide
-const firstSlide = swiper.slides[swiper.activeIndex];
-if (firstSlide.querySelector('.slogan1')) animateSlogan1();
-if (firstSlide.querySelector('.slogan2')) animateSlogan2();
-if (firstSlide.querySelector('.slogan3')) animateSlogan3();

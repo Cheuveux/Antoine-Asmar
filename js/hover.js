@@ -6,7 +6,8 @@
         targets: link,
         color: '#B03A2E',
         letterSpacing: '6px',
-        duration: 600,
+        fontWeight : 700,
+        duration: 700,
         easing: 'easeOutExpo'
       });
     });
@@ -15,8 +16,8 @@
         targets: link,
         color: 'rgb(128, 116, 116)',
         letterSpacing: '0px',
-        
-        duration: 600,
+        fontWeight : 400,
+        duration: 700,
         easing: 'easeOutExpo'
       });
     });
