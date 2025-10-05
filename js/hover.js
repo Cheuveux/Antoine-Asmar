@@ -1,6 +1,4 @@
- 
- 
- document.querySelectorAll('.nav-item a').forEach(link => {
+document.querySelectorAll('.nav-item a').forEach(link => {
     link.addEventListener('mouseenter', () => {
       anime({
         targets: link,
@@ -24,3 +22,29 @@
   });
 
 
+
+//ajout de la classe active pour la page courante
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll(".nav-item a");
+  const currentPage = window.location.pathname;
+
+  links.forEach(link => {
+    const href = link.getAttribute("href");
+    const linkPath = new URL(href, window.location.origin).pathname;
+    if (currentPage.endsWith(linkPath)) {
+      link.classList.add("active");
+    }
+  });
+});
+
+/* CSS for active class */
+const style = document.createElement('style');
+style.innerHTML = `
+  .nav-item a.active {
+    color: #3a3939 !important;
+    font-weight: 700 !important;
+    letter-spacing: 5px !important;
+    
+  }
+`;
+document.head.appendChild(style);
